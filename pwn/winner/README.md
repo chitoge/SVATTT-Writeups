@@ -1,6 +1,7 @@
 # Winner - Pwn 100
 ## Đề bài
-```Vietl0tt v1.0
+```
+Vietl0tt v1.0
 
 nc winner.svattt.org 31335
 winner.c
@@ -32,4 +33,4 @@ Dễ dàng nhận thấy vấn đề nằm ở biến `c`, mặc dù mảng `num
 
 Nhưng vấn đề là biến `point` dùng để so sánh có kiểu `unsigned int` nên khó mà có thể nhỏ hơn 0 được. Hex-Rays lúc dịch ngược còn bỏ qua luôn đoạn này, chứng tỏ là khó có thể làm theo cách này được rồi (mình cũng không dám chắc 100%, nhưng mình dám chắc đến 99% là không theo cách này được, mà biết đâu bất ngờ :sad:). Chúng ta có thể +1 tối đa 256 lần vào 1 giá trị bất kì trong khoảng 127 ô nhớ DWORD-aligned tính từ mảng `numbers` về trước, nên mình chọn cộng vào giá trị saved EIP trước khi gọi hàm `choose`. Mình sẽ nhảy vào địa chỉ lấy flag ngay sau lệnh `jnb` ở `0x08048B3E`, ở offset -31 (tương ứng với char `\xe1`), do hàm khi trả về sẽ ret về địa chỉ `0x08048A65` nên ta cần cộng giá trị saved EIP lên 217.
 
-Flag là `SVATTT{y0u_are_true_winner_pwner_as_w3ll}`, script khai thác được đính kèm theo repo.
+Flag là `SVATTT{y0u_are_true_winner_pwner_as_w3ll}`, script khai thác ở [đây](https://github.com/chitoge/SVATTT-Writeups/blob/master/pwn/winner/pwn1.py).

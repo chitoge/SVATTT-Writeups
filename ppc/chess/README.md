@@ -11,4 +11,4 @@ Bài này mình cũng không xem kĩ lắm, mà là do 2 đồng đội của m�
 
 Flag là `SVATTT{Y0ur_Ch33s_G0d}`.
 
-Script đã sửa mình có để kèm theo repo.
+Script đã sửa từ sunfish ở [đây](https://github.com/chitoge/SVATTT-Writeups/blob/master/ppc/chess/sunfish_modified.py).
