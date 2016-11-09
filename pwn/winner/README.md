@@ -8,7 +8,8 @@ winner.c
 Binary
 libc.so
 
-Inspired by true story.```
+Inspired by true story.
+```
 
 ## Writeup
 Bài này cho phép mình nhập tối đa 256 kí tự, chương trình sẽ đếm số lần xuất hiện của mỗi kí tự trong xâu mình nhập, sau đó random 4 lần lấy kí tự trong khoảng `[0-9A-Fa-f]` rồi cộng số lần xuất hiện * 1024 làm số tiền của mình. Nếu như số tiền < 0 thì chương trình sẽ in ra flag (mình đoán như thế dựa vào source code của chương trình).
