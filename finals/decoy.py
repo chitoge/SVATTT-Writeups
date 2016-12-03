@@ -19,8 +19,8 @@ def getPad(data):
 	return "SVATTT{" + data + "}"
 
 url = "https://scoreboard.svattt.org/task"
-user = "n/a"
-pwd = "justforSVATTTonly"
+user = "TEAMNAME"
+pwd = "TEAMPASSWORD"
 
 
 from splinter import Browser
