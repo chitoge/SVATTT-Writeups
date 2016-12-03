@@ -5,4 +5,4 @@ Writeup cho cuộc thi SVATTT - Đội N/A
 ## Local
 ---
 ## Final
-- [Auto-submit](/SVATTT-Writeups/finals/decoy.py)
+- [Auto-submit](/finals/decoy.py)
