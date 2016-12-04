@@ -41,7 +41,7 @@ SELECT username,username='123\'OR`username`!=' AND password='from`users`--' FROM
 ```
 Để có flag là 1 từ khóa trong r.keys(), thực hiện debug với python-sqlite3 và local database tự tạo; dựa trên kết quả quan sát được, r.keys() là các tên cột trong câu lệnh select; cụ thể là  
 "SELECT username,username='{}' AND password='{}' FROM users"  
-Câu lệnh trên đưa ra 2 key là `username` và `username='<username>'` với username tùy chọn
+Câu lệnh trên đưa ra 2 key là `username` và `username='<username>' AND password='<password>'` với username, passsword tùy chọn
 
 Qua quá trình guessing thì với tên cột thứ 3 là username[4] trả về key '4';
 -> final payload
@@ -55,4 +55,8 @@ Not working [PoC](http://tower2.svattt.org:5002/login?username=guest%27OR%60user
 
 Sau khi tìm hiểu lại thì thực chất`username[flag]` là username với alias flag, và [, `, " là tương đương nhau theo [document](https://www.sqlite.org/lang_keywords.html) của sqlite3.
 ## Patch:
-bổ sung ' ở function filter.
+bổ sung ' ở function filter, do limit 5 chars:
+```
++++s = sub(r'[\'|\)|\/|\*]','',s)
+---s = sub(r'[\(|\)|\/|\*]','',s)
+```
