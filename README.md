@@ -10,14 +10,14 @@ Writeup cho cuộc thi SVATTT - Đội N/A
 3. Web
   - [readfile by @mao](/local/web/readfile)
 4. PPC
-  - [betacaro](/local/ppc/betacaro)
+  - [betacaro by @mao & @minhtt](/local/ppc/betacaro)
   - [chess by @john](/local/ppc/chess)
 
 ## Final
 1. Bin
   - [Shellc0de16]()
 2. Forensics
-  - [noname by @mao&@minhtt](/final/forensics/noname)
+  - [noname by @mao & @minhtt](/final/forensics/noname)
 3. Misc
   - [Misc by @minhtt](/finals/misc)
 4. Pwn
