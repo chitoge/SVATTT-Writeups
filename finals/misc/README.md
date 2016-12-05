@@ -17,7 +17,7 @@ Chắc mình không cần phải làm gì nữa, ahihi
 ```
 Hidden 1
 ```
-Update sau
+@mao said: "ở trong CSS file của *final.svattt.org*"
 
 # Welcome
 ```   
@@ -28,5 +28,8 @@ Format: SVATTT{...}
 Ok, the name of this round: *roadtothecastle*
 
 #Theory of everything 2 
-[Another boring QR multiple-choice](https://goo.gl/TBjNcI)
+```
+https://goo.gl/TBjNcI
+```
+Flag: *SVATTT{what_took_u_s0_l0ng}*
 
