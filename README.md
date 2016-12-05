@@ -15,14 +15,13 @@ Writeup cho cuộc thi SVATTT - Đội N/A
 
 ## Final
 1. Bin
-  - [Shellc0de16]()
+  - [Shellc0de16 by @john]()
 2. Forensics
-  - [noname by @mao & @minhtt](/final/forensics/noname)
+  - [noname by @mao & @minhtt](/finals/forensics/noname)
 3. Misc
   - [Misc by @minhtt](/finals/misc)
 4. Pwn
   - [your profile belongs to me. by @john]()
-  - [superveryez]()
 5. Web
   - [The readfile returns by @mao]()
   - [It's not a bug, it's a feature by @mao]()
