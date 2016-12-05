@@ -1,4 +1,8 @@
-#Forensics
+#noname
+``` 
+password (you will need it later): svattt 
+<a href='https://goo.gl/QvS4ze'>chal</a>
+```
 ##File: 
 [chal](/finals/forensics/chal)
 
@@ -16,5 +20,5 @@ Sau khi mở file lên, ta thấy nhận ra ngay những pattern quan trọng
 Nhưng file zip này đã bị obfuscate với những kí tự rối, điển hình là 0D 0A.
 Bằng kinh nghiệm, dễ là file này đã bị encoding bằng phương pháp [Chunked Transfer](https://en.wikipedia.org/wiki/Chunked_transfer_encoding).
 
-Với vài dòng [code](/finals/forensics/solve.py), ta thiết lập lại được file zip [ban đầu](/finals/forensics/output). Ban tổ chức đưa pass là 'svattt'. Unzip file với password này ta được flag. 
+Với vài dòng [code](/finals/forensics/solve.py), ta thiết lập lại được file zip [ban đầu](/finals/forensics/output). Ban tổ chức đưa pass là 'svattt'. Unzip file với password này ta được [flag](/finals/forensics/flag.txt). 
 

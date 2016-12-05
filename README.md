@@ -14,6 +14,21 @@ Writeup cho cuộc thi SVATTT - Đội N/A
   - [chess by @john](/local/ppc/chess)
 
 ## Final
-- [Auto-submit by @minhtt](/finals/decoy.py)
-- [Tower2 by @mao](/finals/tower/tower2)
-- [Misc by @minhtt](/finals/misc)
+1. Bin
+  - [Shellc0de16]()
+2. Forensics
+  - [noname by @mao&@minhtt](/final/forensics/noname)
+3. Misc
+  - [Misc by @minhtt](/finals/misc)
+4. Pwn
+  - [your profile belongs to me. by @john]()
+  - [superveryez]()
+5. Web
+  - [The readfile returns by @mao]()
+  - [It's not a bug, it's a feature by @mao]()
+6. Auto
+  - [Auto-submit by @minhtt](/finals/decoy.py)
+7. Towers
+  - [Tower2 by @mao](/finals/tower/tower2)
+8. Castle
+  - not yet done
