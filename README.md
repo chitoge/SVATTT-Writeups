@@ -28,6 +28,7 @@ Writeup cho cuộc thi SVATTT - Đội N/A
 6. Auto
   - [Auto-submit by @minhtt](/finals/decoy.py)
 7. Towers
+  - [Tower1 by @minhtt](/finals/tower/tower1)
   - [Tower2 by @mao](/finals/tower/tower2)
 8. Castle
   - not yet done

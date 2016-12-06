@@ -65,7 +65,8 @@ Câu hỏi đặt ra, làm sao để tìm **h**?
 
 Hãy nhìn vào ciphertext với trường hợp payload = ';' x 120 + '0' x 7 [tại đây](/finals/tower/tower1/data/data_out)
 
-Nhìn vào bảng offset, ta thấy bảng có 3 số cuối là 000 -> đoạn '0' x 7 khả năng cao là đã *được* xor với **h**. Đúng thật, ahihi. Mà 0 ^ **h** = **h** chặt rồi! Vậy nên **h** = 0xfe <(")
+Nhìn vào bảng offset, ta thấy bảng có 3 số cuối là 000 -> đoạn '0' x 7 khả năng cao là đã *được* xor với **h**. Đúng thật, ahihi, mà 0 ⊕ **h** = **h** chặt rồi! Vậy nên **h** = 0xfe <(")
+
 Vậy việc cần làm chỉ còn là giải mã **Buffer** -> **b64_poc** -> *flag* thôi!
 Tham khảo code [tại đây](/finals/tower/tower1/solution1.py)
 
@@ -90,6 +91,13 @@ Với kinh nghiệm 4 ngày ăn trưa & ngồi cạnh ảnh ở IACR-SEAMS Schoo
 
 Chỉ biết là CRIME Attack sẽ exploit lỗ hổng nén. Cụ tỉ là: ta sẽ control được data, bởi vì hacker biết được cả **secret cookie** ở đây là offset, và **content** ở đây là data. Khi ấy hacker có thể inject vào data rồi đối chiếu lại ở offset, làm cho các package vẫn hoạt động bình thường.
 
+Điều này chẳng có tác dụng gì trong bài này hết vì tác giả đã encode **PoC** dưới dạng base64 làm cho alphabet của nó giảm đi đáng kể. 
+
 ## Patch binary
-
-
+- Attemp 1: Chỉ cần duy trì HEADER & FOOTER & Ciphertext.Length. Chỉ cần patch cho đoạn 
+```c++
+---offset |=  1;
++++offset |=  0;
+```
+thế là offset trở thành 0 hết, nếu mà không có source code thì có dời mới đoán ra được data là gì. *lol*
+- Attemp 2: Filter nếu signature nhập vào kí tự != base64 alphabet thì drop connection (*mình cũng chả biết làm như nào cả*)
