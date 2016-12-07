@@ -81,8 +81,6 @@ Tham khảo code [tại đây](/finals/tower/tower1/solution2.py)
 - Cons: Phải gửi lên server 65 lần.
 
 ## Solution 3
-Đây chỉ là một ý tưởng, mình chưa đưa nó đi vào thực tế, nhưng mà chắc là cũng được.
-
 Câu hỏi đầu tiên đặt ra, BTC cho hint là **CRIME**. Ok, chúng ta cùng *wiki thần chưởng*: [CRIME](https://en.wikipedia.org/wiki/CRIME)
 
 Trong link này không có gì hay đâu, chỉ có 1 cái tên duy nhất có vẻ hay ho: **Thai Duong**
@@ -92,6 +90,24 @@ Với kinh nghiệm 4 ngày ăn trưa & ngồi cạnh ảnh ở IACR-SEAMS Schoo
 Chỉ biết là CRIME Attack sẽ exploit lỗ hổng nén. Cụ tỉ là: ta sẽ control được data, bởi vì hacker biết được cả **secret cookie** ở đây là offset, và **content** ở đây là data. Khi ấy hacker có thể inject vào data rồi đối chiếu lại ở offset, làm cho các package vẫn hoạt động bình thường.
 
 Điều này chẳng có tác dụng gì trong bài này hết vì tác giả đã encode **PoC** dưới dạng base64 làm cho alphabet của nó giảm đi đáng kể. 
+
+Reverse Code
+```python
+x = 0
+buf = ''
+for i in range(len(offset)):
+  if offset[i] == '0':
+    #decode with ⊕ h
+    buf += chr(ord(data[x]) ^ h)
+    x += 1
+  else:
+    #otherwise add max to the buffer
+    buf += p
+```
+
+Sau khi reverse, ta nhìn thấy được **content** ban đầu là gì, từ đó biết được *hacker* inject malicious code như nào. Bình thường, những case thực tế thì content không ngắn như thế này
+
+Tham khảo code [tại đây](/finals/tower/tower1/solution3.py). Chắc đây là intended solution rồi các bác ạ <(")
 
 ## Patch binary
 - Attemp 1: Chỉ cần duy trì HEADER & FOOTER & Ciphertext.Length. Chỉ cần patch cho đoạn 
