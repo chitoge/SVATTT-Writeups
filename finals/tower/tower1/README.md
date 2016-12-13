@@ -91,7 +91,8 @@ Chỉ biết là CRIME Attack sẽ exploit lỗ hổng nén. Cụ tỉ là: ta s
 
 Điều này chẳng có tác dụng gì trong bài này hết vì tác giả đã encode **PoC** dưới dạng base64 làm cho alphabet của nó giảm đi đáng kể. 
 
-Reverse Code
+Reverse Code, họ làm gì thì mình làm ngược lại thôi <(")
+
 ```python
 x = 0
 buf = ''
